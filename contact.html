@@ -26,6 +26,12 @@
         <section style="text-align: center">
           <h4>Contact Us</h4>
           <form>
+            <div class="g-recaptcha"
+                data-sitekey="6LdbE3oUAAAAAKgSku57_4DtTeP1FIX5_qkrhTsR"
+                data-callback="onSubmit"
+                data-bind="recaptcha-submit"
+                data-size="invisible">
+            </div>
             <label for="email">Email</label>
             <input type="email" required name="email" id="email" aria-autocomplete="email">
             <br><br>
@@ -34,7 +40,7 @@
             <textarea name="body" id="body" rows="4" aria-label="body of email" cols="50">
             </textarea>
             <br><br>
-            <button class="g-recaptcha" data-sitekey="6LdbE3oUAAAAAKgSku57_4DtTeP1FIX5_qkrhTsR" data-callback='onSubmit'>Submit</button>
+            <button id="recaptcha-submit">Submit</button>
           </form>
         </section>
         <footer>
@@ -44,6 +50,6 @@
             <li><img src="images/meetup.png"></li>
           </ul>
         </footer>
-        <script src="./dist/bundle.js"></script>
+       <script src="./dist/bundle.js"></script>
     </body>
 </html>

@@ -34,5 +34,7 @@ function sendMail() {
 }
 
 window.onSubmit = function onSubmit(token) {
-  sendMail()
+  if(token) {
+    sendMail()
+  }
 }
