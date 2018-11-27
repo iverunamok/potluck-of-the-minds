@@ -1,0 +1,35 @@
+h1 {
+  color: pink;
+}
+:root {
+  --primary: #136966;
+  --secondary: #1A9A8B;
+  --tertiary: #8C2425;
+  --quaternary: #E9262C;
+  --quinary: #1E0D1F;
+}
+.test{
+  width: 150px;
+  height: 150px;
+}
+.flexboxContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.darkTurq {
+  background-color: var(--primary);
+}
+.lightTurq {
+  background-color: var(--secondary);
+}
+.darkRed {
+  background-color: var(--tertiary);
+}
+.lightRed {
+  background-color: var(--quaternary);
+}
+.purple {
+  background-color: var(--quinary);
+}
+/*# sourceMappingURL=index.css.map */
