@@ -5,9 +5,12 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo 'right some tests'",
-    "build": "webpack"
+    "build": "webpack",
+    "start": "node server.js"
   },
   "dependencies": {
+    "express": "^4.16.4",
+    "path": "^0.12.7",
     "webpack": "^4.23.1"
   },
   "devDependencies": {
@@ -23,5 +26,6 @@
   "bugs": {
     "url": "https://github.com/iverunamok/potluck-of-the-minds/issues"
   },
-  "homepage": "https://github.com/iverunamok/potluck-of-the-minds#readme"
+  "homepage": "https://github.com/iverunamok/potluck-of-the-minds#readme",
+  "keywords": []
 }
