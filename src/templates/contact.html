@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+      <title>Potluck of the Minds</title>
+      <link rel="icon" type="img/x-icon" href="${require('../imgs/favicon.ico')}">
+      <link rel="stylesheet" href="${htmlWebpackPlugin.files.chunks.main.css}">
+  </head>
+  <body>
+      <header>
+        <nav>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <hr>
+        <div style="text-align: center">
+            <h1> Potluck of the Minds </h1>
+        </div>
+        <hr>
+      </header>
+      <section style="text-align: center">
+        <h4>Contact Us</h4>
+        <form>
+          <div class="g-recaptcha"
+            data-sitekey="6LdbE3oUAAAAAKgSku57_4DtTeP1FIX5_qkrhTsR"
+            data-callback="onSubmit"
+            data-bind="recaptcha-submit"
+            data-size="invisible">
+          </div>
+          <label for="email">Email</label>
+          <input type="email" required name="email" id="email" aria-autocomplete="email">
+          <br><br>
+          <label for="body">Body of Email</label>
+          <br>
+          <textarea name="body" id="body" rows="4" aria-label="body of email" cols="50">
+          </textarea>
+          <br><br>
+          <button id="recaptcha-submit">Submit</button>
+        </form>
+      </section>
+      <footer>
+        <h3>RSVP</h3>
+        <ul>
+          <li><img src="${require('../imgs/facebook-square.png')}"></li>
+        <li><img src="${require('../imgs/meetup.png')}"></li>
+        </ul>
+      </footer>
+      <script src="${htmlWebpackPlugin.files.chunks.main.entry}"></script>
+  </body>
+</html>

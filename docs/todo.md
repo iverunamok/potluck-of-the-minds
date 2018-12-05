@@ -1,3 +1,16 @@
+2018-12-04
+
+Webpack Config for /babel/images
+
+Baseline:
+
+- [x] SCSS
+- [x] Babel/es6
+- [ ] images
+
+******
+
+2018-11-26
 
 Contact Page
 
@@ -5,10 +18,10 @@ Original Description: Contact form that takes the first name(required), last nam
 
 Baseline:
 
-- [ ] email(required)
-- [ ] recaptcha
-- [ ] body of message
-- [ ] added favicon
+- [x] email(required)
+- [x] recaptcha
+- [x] body of message
+- [x] added favicon
 
 Needed?
 
