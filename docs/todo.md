@@ -1,3 +1,8 @@
+Know Bugs:
+
+   JS does not load automatically
+
+
 2018-12-04
 
 Webpack Config for /babel/images
