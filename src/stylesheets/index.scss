@@ -4,8 +4,26 @@ $tertiary: #8C2425;
 $quaternary: #E9262C;
 $quinary: #1E0D1F;
 
+@mixin display-flex($align, $justify, $direction) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+
+@mixin box-shadow(){
+  -webkit-box-shadow: 6px 6px 20px -9px rgba(30,13,31,0.62);
+  -moz-box-shadow: 6px 6px 20px -9px rgba(30,13,31,0.62);
+  box-shadow: 6px 6px 20px -9px rgba(30,13,31,0.62);
+}
+
+@mixin bottom-border() {
+  border-bottom: 1px #1E0D1F solid;
+}
+
 body {
   background-color: $primary;
+  margin: 0rem;
 }
 .test{
   width: 150px;
@@ -30,4 +48,41 @@ body {
 }
 .purple {
   background-color: $quinary;
+}
+
+.top_nav {
+  list-style: none;
+  background-color: #1A9A8B;
+  padding-right: .8rem;
+  @include display-flex(center, space-between, row);
+  a {
+    text-decoration: none;
+    color: #1E0D1F;
+    padding: .5rem;
+    font-size: 2.2vh;
+    font-weight: bold;
+  }
+}
+
+.header {
+  @include bottom-border();
+  margin-bottom: .8vh; 
+  .navbar {
+    background-color: #1A9A8B;
+    width: 100%;
+    @include display-flex(center, space-between, row);
+    .basic_brand {
+      padding-left: 0.8vw;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  list-style: none;
+  align-content: center;
+  justify-content: flex-end;
+  li {
+    text-decoration: none;
+  }
 }
