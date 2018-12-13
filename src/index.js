@@ -25,7 +25,7 @@ if(window.location.pathname.includes('index')) {
     // If the count down is finished, write some text 
     if (distance < 0) {
       clearInterval(this);
-      document.getElementById('counter').innerHTML = 'It Now';
+      document.getElementById('counter').innerHTML = 'It Right Meow!';
     }
   }, 1000);
 }

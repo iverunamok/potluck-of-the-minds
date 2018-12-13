@@ -1,8 +1,14 @@
+// color base
 $primary: #136966;
 $secondary: #1A9A8B;
 $tertiary: #8C2425;
+$tertiary-rgba: rgba(140,36,37,0.63);
 $quaternary: #E9262C;
 $quinary: #1E0D1F;
+$quinary-rgba: rgba(30,13,31,1);
+
+$none: none;
+$spacer-height: 10vh;
 
 @mixin display-flex($align, $justify, $direction) {
   display: flex;
@@ -11,78 +17,102 @@ $quinary: #1E0D1F;
   flex-direction: $direction;
 }
 
-@mixin box-shadow(){
-  -webkit-box-shadow: 6px 6px 20px -9px rgba(30,13,31,0.62);
-  -moz-box-shadow: 6px 6px 20px -9px rgba(30,13,31,0.62);
-  box-shadow: 6px 6px 20px -9px rgba(30,13,31,0.62);
+@mixin box-shadow($cast){
+  @if $cast == 'negative' {
+    -webkit-box-shadow: 6px 8px 34px -11px $tertiary-rgba;
+    -moz-box-shadow: 6px 8px 34px -11px $tertiary-rgba;
+    box-shadow: 6px 8px 34px -11px $tertiary-rgba;
+  } @else {
+    -webkit-box-shadow: 6px 8px 34px -11px $quinary-rgba;
+    -moz-box-shadow: 6px 8px 34px -11px $quinary-rgba;
+    box-shadow: 6px 8px 34px -11px $quinary-rgba;
+  }
+}
+
+@mixin box-shadow-inset($cast){
+  @if $cast == 'negative' {
+    -webkit-box-shadow: inset 6px 8px 34px -11px $tertiary-rgba;
+    -moz-box-shadow: inset 6px 8px 34px -11px $tertiary-rgba;
+    box-shadow: inset 6px 8px 34px -11px $tertiary-rgba;
+  } @else {
+    -webkit-box-shadow: inset 6px 8px 34px -11px $quinary-rgba;
+    -moz-box-shadow: inset 6px 8px 34px -11px $quinary-rgba;
+    box-shadow: inset 6px 8px 34px -11px $quinary-rgba;
+  }
 }
 
 @mixin bottom-border() {
-  border-bottom: 1px #1E0D1F solid;
+  border-bottom: 1px $quinary solid;
 }
 
 body {
   background-color: $primary;
   margin: 0rem;
-}
-.test{
-  width: 150px;
-  height: 150px;
-}
-.flexboxContainer{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.darkTurq {
-  background-color:  $primary;
-}
-.lightTurq {
-  background-color: $secondary;
-}
-.darkRed {
-  background-color: $tertiary;
-}
-.lightRed {
-  background-color: $quaternary;
-}
-.purple {
-  background-color: $quinary;
+  height: 100%;
 }
 
-.top_nav {
-  list-style: none;
-  background-color: #1A9A8B;
-  padding-right: .8rem;
-  @include display-flex(center, space-between, row);
-  a {
-    text-decoration: none;
-    color: #1E0D1F;
-    padding: .5rem;
-    font-size: 2.2vh;
-    font-weight: bold;
-  }
+// this sets the footer at the bottom of the page
+.container {
+  min-height: calc(100vh - 50px);
 }
 
 .header {
-  @include bottom-border();
-  margin-bottom: .8vh; 
+  @include bottom-border(); 
   .navbar {
-    background-color: #1A9A8B;
+    background-color: $secondary;
     width: 100%;
     @include display-flex(center, space-between, row);
-    .basic_brand {
+    .h2-basic-brand {
       padding-left: 0.8vw;
+    }
+  }
+
+  .ul-top-nav {
+    list-style: none;
+    background-color: $secondary;
+    padding-right: .8rem;
+    @include display-flex(center, space-between, row);
+    a {
+      text-decoration: none;
+      color: $quinary;
+      padding: .5rem;
+      font-size: 2.2vh;
+      font-weight: bold;
     }
   }
 }
 
+.section-spacer {
+ height: $spacer-height;
+ background-color: $primary;
+}
+
+.section-content {
+  background-color: $secondary;
+  color: $quinary;
+  text-align: center;
+  padding: .8rem;
+  padding-bottom: 1rem;
+  @include box-shadow-inset(negative);
+}
+
+// footer height cannot be stored as a variable
+// it gets evaled to late
 .footer {
-  display: flex;
-  list-style: none;
-  align-content: center;
-  justify-content: flex-end;
-  li {
-    text-decoration: none;
+  @include display-flex(center, center, row);
+  -webkit-box-shadow: 2px -11px 11px -13px rgba(30,13,31,0.62);
+  -moz-box-shadow: 2px -11px 11px -13px rgba(30,13,31,0.62);
+  box-shadow: 2px -11px 11px -13px rgba(30,13,31,0.62);
+  background-color: #8C2425;
+  height: 50px;
+  padding-bottom: 20px;
+  .footer-elem {
+    padding: .8rem;
+  }
+  ul {
+    list-style: $none;
+    li {
+      text-decoration: $none;
+    }
   }
 }

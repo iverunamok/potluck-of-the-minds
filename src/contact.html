@@ -9,10 +9,11 @@
         <link rel="stylesheet" href="stylesheets/index.scss">
     </head>
     <body>
-      <header class="header">
+      <div class="container">
+        <header class="header">
           <nav class="navbar">
-            <h2 class="basic_brand"> Potluck of the Minds </h1>
-            <ul class="top_nav">
+            <h2 class="h2-basic-brand"> Potluck of the Minds </h2>
+            <ul class="ul-top-nav">
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="contact.html">Contact</a></li>
@@ -39,13 +40,15 @@
             <button id="recaptcha-submit">Submit</button>
           </form>
         </section>
-        <footer>
-          <h3>RSVP</h3>
-          <ul>
-            <li><img src="images/facebook-square.png"></li>
-            <li><img src="images/meetup.png"></li>
-          </ul>
-        </footer>
-       <script src="index.js"></script>
+      </div>
+      <footer class="footer">
+        <h3 class="footer-elem">RSVP</h3>
+        <div class="footer-elem">
+          <img src="images/facebook-square.png">
+          <img src="images/meetup.png">
+        </div>
+      </footer>
+      <script src="index.js"></script>
     </body>
 </html>
+
