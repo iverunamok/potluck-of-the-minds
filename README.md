@@ -4,7 +4,6 @@ A website for the potluck of the minds event in Missoula.
 
 ### TOC
 
-- [Todo](/docs/todo)
 - [Contribute](/docs/CONTRIBUTING.md)
 
 #### Getting started
@@ -25,7 +24,7 @@ A website for the potluck of the minds event in Missoula.
 
 #### Testing Changes for Production Locally
 
-- run the build script -> `npm run build`, this will run webpack and produce a `build` folder at the root of the project.
+- run the build script -> `npm run build`, this will run webpack and produce a `dist` folder at the root of the project.
 - to start server run `node server.js` or `yarn start`
 
 #### Testing Changes for production remotely

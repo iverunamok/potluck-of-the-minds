@@ -7,6 +7,7 @@ $quaternary: #E9262C;
 $quinary: #1E0D1F;
 $quinary-rgba: rgba(30,13,31,1);
 
+// reusable values
 $none: none;
 $spacer-height: 10vh;
 
@@ -66,7 +67,6 @@ body {
       padding-left: 0.8vw;
     }
   }
-
   .ul-top-nav {
     list-style: none;
     background-color: $secondary;
@@ -100,10 +100,10 @@ body {
 // it gets evaled to late
 .footer {
   @include display-flex(center, center, row);
-  -webkit-box-shadow: 2px -11px 11px -13px rgba(30,13,31,0.62);
-  -moz-box-shadow: 2px -11px 11px -13px rgba(30,13,31,0.62);
-  box-shadow: 2px -11px 11px -13px rgba(30,13,31,0.62);
-  background-color: #8C2425;
+  -webkit-box-shadow: 2px -11px 11px -13px $quinary-rgba;
+  -moz-box-shadow: 2px -11px 11px -13px $quinary-rgba;
+  box-shadow: 2px -11px 11px -13px $quinary-rgba;
+  background-color: $tertiary;
   height: 50px;
   padding-bottom: 20px;
   .footer-elem {
