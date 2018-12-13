@@ -1,3 +1,5 @@
+console.log('index js')
+
 const countDownDate = new Date('Oct 26, 2018 18:00:00').getTime();
 
 // Update the count down every 1 second
@@ -22,8 +24,8 @@ if(window.location.pathname.includes('index')) {
   
     // If the count down is finished, write some text 
     if (distance < 0) {
-      clearInterval(x);
-      document.getElementById('counter').innerHTML = 'It Now';
+      clearInterval(this);
+      document.getElementById('counter').innerHTML = 'It Right Meow!';
     }
   }, 1000);
 }
