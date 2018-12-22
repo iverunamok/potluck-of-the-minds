@@ -6,10 +6,12 @@ $tertiary-rgba: rgba(140,36,37,0.63);
 $quaternary: #E9262C;
 $quinary: #1E0D1F;
 $quinary-rgba: rgba(30,13,31,1);
+$senary: #f3ece7;
 
 // reusable values
 $none: none;
 $spacer-height: 10vh;
+$font-family: 'Questrial', sans-serif;
 
 @mixin display-flex($align, $justify, $direction) {
   display: flex;
@@ -47,9 +49,15 @@ $spacer-height: 10vh;
 }
 
 body {
+  color: $senary;
   background-color: $primary;
   margin: 0rem;
   height: 100%;
+}
+
+img {
+  height: 50px;
+  width: 50px
 }
 
 // this sets the footer at the bottom of the page
@@ -58,8 +66,9 @@ body {
 }
 
 .header {
-  @include bottom-border(); 
   .navbar {
+    font-family: $font-family;
+    color: $senary;
     background-color: $secondary;
     width: 100%;
     @include display-flex(center, space-between, row);
@@ -71,47 +80,58 @@ body {
     list-style: none;
     background-color: $secondary;
     padding-right: .8rem;
+    font-family: $font-family;
     @include display-flex(center, space-between, row);
     a {
+      color: $senary;
       text-decoration: none;
-      color: $quinary;
+      font-family: $font-family;
       padding: .5rem;
-      font-size: 2.2vh;
-      font-weight: bold;
+      font-size: 2.8vh;
     }
   }
 }
 
 .section-spacer {
  height: $spacer-height;
- background-color: $primary;
 }
 
 .section-content {
+  font-family: $font-family;
+  font-size: 2.6vh;
+  // text-shadow: 1px 1px black;
   background-color: $secondary;
-  color: $quinary;
+  color: $senary;
   text-align: center;
   padding: .8rem;
   padding-bottom: 1rem;
   @include box-shadow-inset(negative);
+    #counter {
+      font-size: 30px;
+      // text-shadow: 1px 1px white;
+      color: $senary;
+    }
 }
 
 // footer height cannot be stored as a variable
 // it gets evaled to late
 .footer {
+  font-family: $font-family;
   @include display-flex(center, center, row);
   -webkit-box-shadow: 2px -11px 11px -13px $quinary-rgba;
   -moz-box-shadow: 2px -11px 11px -13px $quinary-rgba;
   box-shadow: 2px -11px 11px -13px $quinary-rgba;
   background-color: $tertiary;
   height: 50px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   .footer-elem {
+    margin-top: 1%;
     padding: .8rem;
   }
   ul {
     list-style: $none;
     li {
+      color: $senary;
       text-decoration: $none;
     }
   }
