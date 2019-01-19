@@ -1,6 +1,6 @@
 console.log('index js')
 
-const countDownDate = new Date('February 26, 2019 18:00:00').getTime();
+const countDownDate = new Date('February 22, 2019 18:30:00').getTime();
 
 // Update the count down every 1 second
 if(window.location.pathname.includes('index')) {

@@ -6,12 +6,12 @@ $tertiary-rgba: rgba(140,36,37,0.63);
 $quaternary: #E9262C;
 $quinary: #1E0D1F;
 $quinary-rgba: rgba(30,13,31,1);
-$senary: #f3ece7;
+$senary: #ffff;
 
 // reusable values
 $none: none;
 $spacer-height: 10vh;
-$font-family: 'Questrial', sans-serif;
+$font-family: 'Poppins', sans-serif;
 
 @mixin display-flex($align, $justify, $direction) {
   display: flex;
@@ -50,7 +50,7 @@ $font-family: 'Questrial', sans-serif;
 
 body {
   color: $senary;
-  background-color: $primary;
+  background-color: $quinary;
   margin: 0rem;
   height: 100%;
 }
@@ -66,10 +66,12 @@ img {
 }
 
 .header {
+  background-image: url("../images/Background.jpg");
+  background-repeat: no-repeat;
+  height: 800px;
   .navbar {
     font-family: $font-family;
     color: $senary;
-    background-color: $secondary;
     width: 100%;
     @include display-flex(center, space-between, row);
     .h2-basic-brand {
@@ -78,7 +80,6 @@ img {
   }
   .ul-top-nav {
     list-style: none;
-    background-color: $secondary;
     padding-right: .8rem;
     font-family: $font-family;
     @include display-flex(center, space-between, row);
@@ -92,25 +93,68 @@ img {
   }
 }
 
+.section-content-header {
+  font-family: $font-family;
+  font-size: 2.6vh;
+  color: $senary;
+  color: #000000;
+  text-align: center;
+    #counter {
+      font-size: 30px;
+      color: $senary;
+    }
+}
+
+.h3-animated-potm{
+  font-size: 40px;
+  color: $senary;
+  padding-top: 12%;
+}
+
 .section-spacer {
  height: $spacer-height;
 }
 
-.section-content {
+.section-content-slider {
+  height: 643px;
+}
+
+// .section-content {
+//   font-family: $font-family;
+//   font-size: 2.6vh;
+//   color: $senary;
+//   text-align: center;
+//   padding: .8rem;
+//   padding-bottom: 1rem;
+  // @include box-shadow-inset(negative);
+// }
+
+.section-content-articles {
   font-family: $font-family;
   font-size: 2.6vh;
-  // text-shadow: 1px 1px black;
-  background-color: $secondary;
-  color: $senary;
-  text-align: center;
-  padding: .8rem;
-  padding-bottom: 1rem;
-  @include box-shadow-inset(negative);
-    #counter {
-      font-size: 30px;
-      // text-shadow: 1px 1px white;
-      color: $senary;
-    }
+  background-color: #000000;
+  color: #ffffff;
+  height: 642px;
+}
+
+.section-content-events{
+  font-family: $font-family;
+  font-size: 2.6vh;
+  background-image: url("../images/greg-rakozy-38802-unsplash.jpg");
+  color: #ffffff;
+  height: 1026px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.section-content-speakers{
+  font-family: $font-family;
+  font-size: 2.6vh;
+  background-image: url("../images/nathan-anderson-313342-unsplash.jpg");
+  color: #ffffff;
+  height: 1026px;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 // footer height cannot be stored as a variable
@@ -121,7 +165,7 @@ img {
   -webkit-box-shadow: 2px -11px 11px -13px $quinary-rgba;
   -moz-box-shadow: 2px -11px 11px -13px $quinary-rgba;
   box-shadow: 2px -11px 11px -13px $quinary-rgba;
-  background-color: $tertiary;
+  background-color: $quinary;
   height: 50px;
   padding-bottom: 10px;
   .footer-elem {
