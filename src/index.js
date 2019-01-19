@@ -1,5 +1,8 @@
-console.log('index js')
+import $ from 'jquery'
+import bulmaCarousel from '../node_modules/bulma-carousel/dist/js/bulma-carousel'
 
+// dom ready
+const carousels = bulmaCarousel.attach()
 const countDownDate = new Date('February 26, 2019 18:00:00').getTime();
 
 // Update the count down every 1 second
