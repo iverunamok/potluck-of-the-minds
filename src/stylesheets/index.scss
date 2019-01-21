@@ -61,24 +61,24 @@ img {
 }
 
 // this sets the footer at the bottom of the page
-.container {
+.potm-container {
   min-height: calc(100vh - 50px);
 }
 
-.header {
+.potm-header {
   background-image: url("../images/Background.jpg");
   background-repeat: no-repeat;
   height: 800px;
-  .navbar {
+  .potm-navbar {
     font-family: $font-family;
     color: $senary;
     width: 100%;
     @include display-flex(center, space-between, row);
-    .h2-basic-brand {
+    .potm-h2-basic-brand {
       padding-left: 0.8vw;
     }
   }
-  .ul-top-nav {
+  .potm-ul-top-nav {
     list-style: none;
     padding-right: .8rem;
     font-family: $font-family;
@@ -93,7 +93,7 @@ img {
   }
 }
 
-.section-content-header {
+.potm-section-content-header {
   font-family: $font-family;
   font-size: 2.6vh;
   color: $senary;
@@ -105,31 +105,21 @@ img {
     }
 }
 
-.h3-animated-potm{
+.potm-h3-animated-potm{
   font-size: 40px;
   color: $senary;
   padding-top: 12%;
 }
 
-.section-spacer {
+.potm-section-spacer {
  height: $spacer-height;
 }
 
-.section-content-slider {
+.potm-section-content-slider {
   height: 643px;
 }
 
-// .section-content {
-//   font-family: $font-family;
-//   font-size: 2.6vh;
-//   color: $senary;
-//   text-align: center;
-//   padding: .8rem;
-//   padding-bottom: 1rem;
-  // @include box-shadow-inset(negative);
-// }
-
-.section-content-articles {
+.potm-section-content-articles {
   font-family: $font-family;
   font-size: 2.6vh;
   background-color: #000000;
@@ -137,7 +127,7 @@ img {
   height: 642px;
 }
 
-.section-content-events{
+.potm-section-content-events{
   font-family: $font-family;
   font-size: 2.6vh;
   background-image: url("../images/greg-rakozy-38802-unsplash.jpg");
@@ -147,7 +137,7 @@ img {
   background-size: contain;
 }
 
-.section-content-speakers{
+.potm-section-content-speakers{
   font-family: $font-family;
   font-size: 2.6vh;
   background-image: url("../images/nathan-anderson-313342-unsplash.jpg");
@@ -159,7 +149,7 @@ img {
 
 // footer height cannot be stored as a variable
 // it gets evaled to late
-.footer {
+.potm-footer {
   font-family: $font-family;
   @include display-flex(center, center, row);
   -webkit-box-shadow: 2px -11px 11px -13px $quinary-rgba;
@@ -168,7 +158,7 @@ img {
   background-color: $quinary;
   height: 50px;
   padding-bottom: 10px;
-  .footer-elem {
+  .potm-footer-elem {
     margin-top: 1%;
     padding: .8rem;
   }
