@@ -5,6 +5,7 @@ A website for the potluck of the minds event in Missoula.
 ### TOC
 
 - [Contribute](/docs/CONTRIBUTING.md)
+- [Styling Conventions and Library](./docs/)
 
 #### Getting started
 

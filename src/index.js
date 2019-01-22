@@ -1,9 +1,17 @@
-console.log('index js')
+import $ from 'jquery'
+import bulmaCarousel from '../node_modules/bulma-carousel/dist/js/bulma-carousel'
 
-const countDownDate = new Date('February 26, 2019 18:00:00').getTime();
+console.log(window.location.pathname === '/')
+// dom ready
+const carousels = bulmaCarousel.attach()
+const countDownDate = new Date('February 22, 2019 18:30:00').getTime();
+
+// string constants
+const COUNTER_ID = 'potm-counter'
 
 // Update the count down every 1 second
-if(window.location.pathname.includes('index')) {
+if(window.location.pathname.includes('index') || window.location.pathname === '/') {
+  console.log('helo')
   setInterval(() => {
     'use strict';
     // Get todays date and time
@@ -19,13 +27,21 @@ if(window.location.pathname.includes('index')) {
     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
   
     // Display the result in the element with id="demo"
-    let html = `${days}d ${hours}h ${minutes}m ${seconds}s `;
-    document.getElementById('counter').innerHTML = html;
+    let html = 
+    `<span class='potm-clock-number'>${days}<span>
+     <span class='potm-clock-letter'>D</span>
+     <span class='potm-clock-number'>${hours}</span>
+     <span class='potm-clock-letter'>H</span> 
+     <span class='potm-clock-number'>${minutes}</span>
+     <span class='potm-clock-letter'>M</span> 
+     <span class='potm-clock-number'>${seconds}<span>
+     <span class='potm-clock-letter'>S</span> `;
+    document.getElementById(COUNTER_ID).innerHTML = html;
   
     // If the count down is finished, write some text 
     if (distance < 0) {
       clearInterval(this);
-      document.getElementById('counter').innerHTML = 'It Right Meow!';
+      document.getElementById(COUNTER_ID).innerHTML = 'It Right Meow!';
     }
   }, 1000);
 }
