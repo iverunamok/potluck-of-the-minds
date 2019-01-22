@@ -10,12 +10,12 @@ $tertiary-rgba: rgba(140,36,37,0.63);
 $quaternary: #E9262C;
 $quinary: #1E0D1F;
 $quinary-rgba: rgba(30,13,31,1);
-$senary: #f3ece7;
+$senary: #ffff;
 
 // reusable values
 $none: none;
 $spacer-height: 10vh;
-$font-family: 'Questrial', sans-serif;
+$font-family: 'Poppins', sans-serif;
 
 @mixin display-flex($align, $justify, $direction) {
   display: flex;
@@ -54,7 +54,7 @@ $font-family: 'Questrial', sans-serif;
 
 body {
   color: $senary;
-  background-color: $primary;
+  background-color: $quinary;
   margin: 0rem;
   height: 100%;
 }
@@ -65,24 +65,25 @@ img {
 }
 
 // this sets the footer at the bottom of the page
-.container {
+.potm-container {
   min-height: calc(100vh - 50px);
 }
 
-.header {
-  .navbar {
+.potm-header {
+  background-image: url("../images/Background.jpg");
+  background-repeat: no-repeat;
+  height: 800px;
+  .potm-navbar {
     font-family: $font-family;
     color: $senary;
-    background-color: $secondary;
     width: 100%;
     @include display-flex(center, space-between, row);
-    .h2-basic-brand {
+    .potm-h2-basic-brand {
       padding-left: 0.8vw;
     }
   }
-  .ul-top-nav {
+  .potm-ul-top-nav {
     list-style: none;
-    background-color: $secondary;
     padding-right: .8rem;
     font-family: $font-family;
     @include display-flex(center, space-between, row);
@@ -96,39 +97,72 @@ img {
   }
 }
 
-.section-spacer {
- height: $spacer-height;
-}
-
-.section-content {
+.potm-section-content-header {
   font-family: $font-family;
   font-size: 2.6vh;
-  // text-shadow: 1px 1px black;
-  background-color: $secondary;
   color: $senary;
+  color: #000000;
   text-align: center;
-  padding: .8rem;
-  padding-bottom: 1rem;
-  @include box-shadow-inset(negative);
     #counter {
       font-size: 30px;
-      // text-shadow: 1px 1px white;
       color: $senary;
     }
 }
 
+.potm-h3-animated-potm{
+  font-size: 40px;
+  color: $senary;
+  padding-top: 12%;
+}
+
+.potm-section-spacer {
+ height: $spacer-height;
+}
+
+.potm-section-content-slider {
+  height: 643px;
+}
+
+.potm-section-content-articles {
+  font-family: $font-family;
+  font-size: 2.6vh;
+  background-color: #000000;
+  color: #ffffff;
+  height: 642px;
+}
+
+.potm-section-content-events{
+  font-family: $font-family;
+  font-size: 2.6vh;
+  background-image: url("../images/greg-rakozy-38802-unsplash.jpg");
+  color: #ffffff;
+  height: 1026px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.potm-section-content-speakers{
+  font-family: $font-family;
+  font-size: 2.6vh;
+  background-image: url("../images/nathan-anderson-313342-unsplash.jpg");
+  color: #ffffff;
+  height: 1026px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 // footer height cannot be stored as a variable
 // it gets evaled to late
-.footer {
+.potm-footer {
   font-family: $font-family;
   @include display-flex(center, center, row);
   -webkit-box-shadow: 2px -11px 11px -13px $quinary-rgba;
   -moz-box-shadow: 2px -11px 11px -13px $quinary-rgba;
   box-shadow: 2px -11px 11px -13px $quinary-rgba;
-  background-color: $tertiary;
+  background-color: $quinary;
   height: 50px;
   padding-bottom: 10px;
-  .footer-elem {
+  .potm-footer-elem {
     margin-top: 1%;
     padding: .8rem;
   }
