@@ -8,9 +8,15 @@ const countDownDate = new Date('February 22, 2019 18:30:00').getTime();
 
 // string constants
 const COUNTER_ID = 'potm-counter'
+const placementArray = [
+  'potm-days',
+  'potm-hours',
+  'potm-minutes',
+  'potm-seconds',
+]
 
 // Update the count down every 1 second
-if(false) {
+if(true) {
   console.log('helo')
   setInterval(() => {
     'use strict';
@@ -25,15 +31,11 @@ if(false) {
     let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  
+    const timeArray = [days, hours, minutes, seconds]
     // Display the result in the element with id="demo"
-    let html = 
-    `<span class='potm-clock-number'>${days}<span>
-     <span class='potm-clock-number'>${hours}</span>
-     <span class='potm-clock-number'>${minutes}</span>
-     <span class='potm-clock-number'>${seconds}<span>
-     `;
-    document.getElementById(COUNTER_ID).innerHTML = html;
+    for (let index = 0; index < placementArray.length; index++) {
+      document.getElementById(placementArray[index]).textContent = timeArray[index];
+    }
   
     // If the count down is finished, write some text 
     if (distance < 0) {
