@@ -10,7 +10,7 @@ const countDownDate = new Date('February 22, 2019 18:30:00').getTime();
 const COUNTER_ID = 'potm-counter'
 
 // Update the count down every 1 second
-if(window.location.pathname.includes('index') || window.location.pathname === '/') {
+if(false) {
   console.log('helo')
   setInterval(() => {
     'use strict';

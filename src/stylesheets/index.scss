@@ -102,8 +102,10 @@ img {
   font-size: 2.6vh;
   color: $senary;
   color: #000000;
-  text-align: center;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
   .potm-h3-animated-potm{
     font-size: 79px;
