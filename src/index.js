@@ -29,13 +29,10 @@ if(window.location.pathname.includes('index') || window.location.pathname === '/
     // Display the result in the element with id="demo"
     let html = 
     `<span class='potm-clock-number'>${days}<span>
-     <span class='potm-clock-letter'>D</span>
      <span class='potm-clock-number'>${hours}</span>
-     <span class='potm-clock-letter'>H</span> 
      <span class='potm-clock-number'>${minutes}</span>
-     <span class='potm-clock-letter'>M</span> 
      <span class='potm-clock-number'>${seconds}<span>
-     <span class='potm-clock-letter'>S</span> `;
+     `;
     document.getElementById(COUNTER_ID).innerHTML = html;
   
     // If the count down is finished, write some text 

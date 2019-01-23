@@ -103,16 +103,86 @@ img {
   color: $senary;
   color: #000000;
   text-align: center;
-    #counter {
-      font-size: 30px;
-      color: $senary;
-    }
-}
+  position: relative;
 
-.potm-h3-animated-potm{
-  font-size: 40px;
-  color: $senary;
-  padding-top: 12%;
+  .potm-h3-animated-potm{
+    font-size: 79px;
+    color: $senary;
+    padding-top: 12%;
+  }
+
+  #potm-counter {
+    color: rgba(26,154,139,0.64);
+    font-family: $font-family;
+    width: 74px;
+    height: 89px;
+    font-size: 59px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 6px;
+    position: relative;
+  }
+
+  .potm-meow-days {
+    position: absolute;
+    font-family: "Avenir Next";
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    color: $senary;
+    border-radius: 3px;
+    font-weight: 500;
+    letter-spacing: 1.63px;
+    padding-top: 6px;
+    z-index: 2;
+    margin-left: -18.75%;
+    margin-top: 3%;
+  }
+
+  .potm-meow-hours {
+    position: absolute;
+    font-family: "Avenir Next";
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    color: $senary;
+    border-radius: 3px;
+    font-weight: 500;
+    letter-spacing: 1.63px;
+    padding-top: 6px;
+    margin-left: -18%;
+    margin-top: 3%;
+  }
+  
+  .potm-meow-minutes {
+    position: absolute;
+    font-family: "Avenir Next";
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    color: $senary;
+    border-radius: 3px;
+    font-weight: 500;
+    letter-spacing: 1.63px;
+    padding-top: 6px;
+    margin-left: -11.50%;
+    margin-top: 3%;
+  }
+
+  .potm-meow-seconds {
+    position: absolute;
+    font-family: "Avenir Next";
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    color: $senary;
+    border-radius: 3px;
+    font-weight: 500;
+    letter-spacing: 1.63px;
+    padding-top: 6px;
+    margin-left: -5.50%;
+    margin-top: 3%;
+  }
 }
 
 .potm-section-spacer {
