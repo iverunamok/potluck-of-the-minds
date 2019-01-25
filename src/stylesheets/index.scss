@@ -4,6 +4,9 @@
 @import "./globalVars.scss";
 @import "./mixinIndex.scss";
 
+// Componenet Stylesheets
+@import "./counter.scss";
+
 body {
   color: $senary;
   background-color: $quinary;
@@ -16,7 +19,7 @@ img {
   width: 50px
 }
 
-// this sets the footer at the bottom of the page
+// This sets the footer at the bottom of the page
 .potm-container {
   min-height: calc(100vh - 50px);
 }
@@ -150,8 +153,8 @@ img {
 .potm-section-content-articles {
   font-family: $poppins-font-family;
   font-size: 2.6vh;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: $black;
+  color: $senary;
   height: 642px;
 }
 
@@ -159,7 +162,7 @@ img {
   font-family: $poppins-font-family;
   font-size: 2.6vh;
   background-image: url("../images/greg-rakozy-38802-unsplash.jpg");
-  color: #ffffff;
+  color: $senary;
   height: 1026px;
   background-repeat: no-repeat;
   background-size: contain;
@@ -169,20 +172,17 @@ img {
   font-family: $poppins-font-family;
   font-size: 2.6vh;
   background-image: url("../images/nathan-anderson-313342-unsplash.jpg");
-  color: #ffffff;
+  color: $senary;
   height: 1026px;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-// footer height cannot be stored as a variable
-// it gets evaled to late
+// Footer height cannot be stored as a variable
+// It gets evaled to late
 .potm-footer {
   font-family: $poppins-font-family;
   @include display-flex(center, center, row);
-  -webkit-box-shadow: 2px -11px 11px -13px $quinary-rgba;
-  -moz-box-shadow: 2px -11px 11px -13px $quinary-rgba;
-  box-shadow: 2px -11px 11px -13px $quinary-rgba;
   background-color: $quinary;
   height: 50px;
   padding-bottom: 10px;
@@ -199,62 +199,9 @@ img {
   }
 }
 
-.time {
-  opacity: 0.5;
-  p {
-    color: #136966;
-    font-size: 48px;
-    font-weight: 300px;
-    font-weight: 900;
-  }      
-}
-
-.test {
-  color: white;
-  text-align: center;
-}
-
-.potm-counter-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 1fr);
-  grid-auto-rows: 50px;
-  grid-gap: 50px;
-  margin-left:20px;
-  div:nth-child(1) { grid-column: 1 / 2; grid-row: 1; z-index: 0; }
-  div:nth-child(2) { grid-column: 1 / 2; grid-row: 1; z-index: 1; }
-  div:nth-child(3) { grid-column: 2 / 3; grid-row: 1; z-index: 0; }
-  div:nth-child(4) { grid-column: 2 / 3; grid-row: 1; z-index: 1; }
-  div:nth-child(5) { grid-column: 3 / 4; grid-row: 1; z-index: 0; }
-  div:nth-child(6) { grid-column: 3 / 4; grid-row: 1; z-index: 1; }
-  div:nth-child(7) { grid-column: 4 / 5; grid-row: 1; z-index: 0; }
-  div:nth-child(8) { grid-column: 4 / 5; grid-row: 1; z-index: 1; }
-}
-
-.text {
-  font-family: "Avenir Next";
-  font-size: 13px;
-  line-height: 18px;
-  text-align: center;
-  color: #ffff;
-  border-radius: 3px;
-  font-weight: 500;
-  padding-top: 15px;
-  margin-top: 15px;
-}
-
-.grid > div:nth-child(1) { grid-column: 1 / 2; grid-row: 1; z-index: 0; }
-.grid > div:nth-child(2) { grid-column: 1 / 2; grid-row: 1; z-index: 1; }
-.grid > div:nth-child(3) { grid-column: 2 / 3; grid-row: 1; z-index: 0; }
-.grid > div:nth-child(4) { grid-column: 2 / 3; grid-row: 1; z-index: 1; }
-.grid > div:nth-child(5) { grid-column: 3 / 4; grid-row: 1; z-index: 0; }
-.grid > div:nth-child(6) { grid-column: 3 / 4; grid-row: 1; z-index: 1; }
-.grid > div:nth-child(7) { grid-column: 4 / 5; grid-row: 1; z-index: 0; }
-.grid > div:nth-child(8) { grid-column: 4 / 5; grid-row: 1; z-index: 1; }
-
-// icon link styles
-
+// Icon link styles
 a > .fab {
-  color: white;
+  color: $senary;
 }
 
 a.social-link {

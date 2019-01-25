@@ -1,34 +1,12 @@
+// A basic reusable flexbox mixin
+// $align sets align-items
+// $justify sets justify-content
+// $direction sets flex-direction
+// Example implementation:
+// @include display-flex(center, center, row);
 @mixin display-flex($align, $justify, $direction) {
   display: flex;
   align-items: $align;
   justify-content: $justify;
   flex-direction: $direction;
-}
-
-@mixin box-shadow($cast){
-  @if $cast == 'negative' {
-    -webkit-box-shadow: 6px 8px 34px -11px $tertiary-rgba;
-    -moz-box-shadow: 6px 8px 34px -11px $tertiary-rgba;
-    box-shadow: 6px 8px 34px -11px $tertiary-rgba;
-  } @else {
-    -webkit-box-shadow: 6px 8px 34px -11px $quinary-rgba;
-    -moz-box-shadow: 6px 8px 34px -11px $quinary-rgba;
-    box-shadow: 6px 8px 34px -11px $quinary-rgba;
-  }
-}
-
-@mixin box-shadow-inset($cast){
-  @if $cast == 'negative' {
-    -webkit-box-shadow: inset 6px 8px 34px -11px $tertiary-rgba;
-    -moz-box-shadow: inset 6px 8px 34px -11px $tertiary-rgba;
-    box-shadow: inset 6px 8px 34px -11px $tertiary-rgba;
-  } @else {
-    -webkit-box-shadow: inset 6px 8px 34px -11px $quinary-rgba;
-    -moz-box-shadow: inset 6px 8px 34px -11px $quinary-rgba;
-    box-shadow: inset 6px 8px 34px -11px $quinary-rgba;
-  }
-}
-
-@mixin bottom-border() {
-  border-bottom: 1px $quinary solid;
 }
