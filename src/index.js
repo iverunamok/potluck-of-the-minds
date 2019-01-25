@@ -1,13 +1,13 @@
 import $ from 'jquery'
 import bulmaCarousel from '../node_modules/bulma-carousel/dist/js/bulma-carousel'
 
-console.log(window.location.pathname === '/')
-// dom ready
+// Dom ready?
 const carousels = bulmaCarousel.attach()
-const countDownDate = new Date('February 22, 2019 18:30:00').getTime();
 
-// string constants
+// String constants
 const COUNTER_ID = 'potm-counter'
+const COUNT_DATE = 'February 22, 2019 18:30:00'
+// Ids for setting the countdown
 const placementArray = [
   'potm-days',
   'potm-hours',
@@ -15,9 +15,15 @@ const placementArray = [
   'potm-seconds',
 ]
 
+const countDownDate = new Date(COUNT_DATE).getTime();
+
+function checkIndex () {
+  return window.location.pathname.includes('index') 
+  || window.location.pathname === '/'
+}
+
 // Update the count down every 1 second
-if(true) {
-  console.log('helo')
+if(checkIndex()) {
   setInterval(() => {
     'use strict';
     // Get todays date and time
@@ -32,7 +38,6 @@ if(true) {
     let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
     const timeArray = [days, hours, minutes, seconds]
-    // Display the result in the element with id="demo"
     for (let index = 0; index < placementArray.length; index++) {
       document.getElementById(placementArray[index]).textContent = timeArray[index];
     }
