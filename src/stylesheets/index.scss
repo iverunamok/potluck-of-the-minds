@@ -66,6 +66,8 @@ img {
     font-size: 79px;
     color: $senary;
     padding-top: 12%;
+    text-shadow: 6px 6px $primary, -6px -6px $quaternary;
+    font-weight: bolder;
   }
 
   #potm-counter {
