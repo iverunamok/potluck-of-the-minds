@@ -1,56 +1,11 @@
 @charset "utf-8";
 @import "~bulma/bulma";
 @import "~bulma-carousel/dist/css/bulma-carousel";
+@import "./globalVars.scss";
+@import "./mixinIndex.scss";
 
-// color base
-$primary: #136966;
-$secondary: #1A9A8B;
-$tertiary: #8C2425;
-$tertiary-rgba: rgba(140,36,37,0.63);
-$quaternary: #E9262C;
-$quinary: #1E0D1F;
-$quinary-rgba: rgba(30,13,31,1);
-$senary: #ffff;
-
-// reusable values
-$none: none;
-$spacer-height: 10vh;
-$font-family: 'Poppins', sans-serif;
-
-@mixin display-flex($align, $justify, $direction) {
-  display: flex;
-  align-items: $align;
-  justify-content: $justify;
-  flex-direction: $direction;
-}
-
-@mixin box-shadow($cast){
-  @if $cast == 'negative' {
-    -webkit-box-shadow: 6px 8px 34px -11px $tertiary-rgba;
-    -moz-box-shadow: 6px 8px 34px -11px $tertiary-rgba;
-    box-shadow: 6px 8px 34px -11px $tertiary-rgba;
-  } @else {
-    -webkit-box-shadow: 6px 8px 34px -11px $quinary-rgba;
-    -moz-box-shadow: 6px 8px 34px -11px $quinary-rgba;
-    box-shadow: 6px 8px 34px -11px $quinary-rgba;
-  }
-}
-
-@mixin box-shadow-inset($cast){
-  @if $cast == 'negative' {
-    -webkit-box-shadow: inset 6px 8px 34px -11px $tertiary-rgba;
-    -moz-box-shadow: inset 6px 8px 34px -11px $tertiary-rgba;
-    box-shadow: inset 6px 8px 34px -11px $tertiary-rgba;
-  } @else {
-    -webkit-box-shadow: inset 6px 8px 34px -11px $quinary-rgba;
-    -moz-box-shadow: inset 6px 8px 34px -11px $quinary-rgba;
-    box-shadow: inset 6px 8px 34px -11px $quinary-rgba;
-  }
-}
-
-@mixin bottom-border() {
-  border-bottom: 1px $quinary solid;
-}
+// Componenet Stylesheets
+@import "./counter.scss";
 
 body {
   color: $senary;
@@ -64,7 +19,7 @@ img {
   width: 50px
 }
 
-// this sets the footer at the bottom of the page
+// This sets the footer at the bottom of the page
 .potm-container {
   min-height: calc(100vh - 50px);
 }
@@ -74,7 +29,7 @@ img {
   background-repeat: no-repeat;
   height: 800px;
   .potm-navbar {
-    font-family: $font-family;
+    font-family: $poppins-font-family;
     color: $senary;
     width: 100%;
     @include display-flex(center, space-between, row);
@@ -85,12 +40,12 @@ img {
   .potm-ul-top-nav {
     list-style: none;
     padding-right: .8rem;
-    font-family: $font-family;
+    font-family: $poppins-font-family;
     @include display-flex(center, space-between, row);
     a {
       color: $senary;
       text-decoration: none;
-      font-family: $font-family;
+      font-family: $poppins-font-family;
       padding: .5rem;
       font-size: 2.8vh;
     }
@@ -98,21 +53,93 @@ img {
 }
 
 .potm-section-content-header {
-  font-family: $font-family;
+  font-family: $poppins-font-family;
   font-size: 2.6vh;
   color: $senary;
   color: #000000;
-  text-align: center;
-    #counter {
-      font-size: 30px;
-      color: $senary;
-    }
-}
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
-.potm-h3-animated-potm{
-  font-size: 40px;
-  color: $senary;
-  padding-top: 12%;
+  .potm-h3-animated-potm{
+    font-size: 79px;
+    color: $senary;
+    padding-top: 12%;
+  }
+
+  #potm-counter {
+    color: $primary-rgba;
+    font-family: $poppins-font-family;
+    width: 74px;
+    height: 89px;
+    font-size: 59px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 6px;
+    position: relative;
+  }
+
+  .potm-meow-days {
+    position: absolute;
+    font-family: "Avenir Next";
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    color: $senary;
+    border-radius: 3px;
+    font-weight: 500;
+    letter-spacing: 1.63px;
+    padding-top: 6px;
+    z-index: 2;
+    margin-left: -18.75%;
+    margin-top: 3%;
+  }
+
+  .potm-meow-hours {
+    position: absolute;
+    font-family: "Avenir Next";
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    color: $senary;
+    border-radius: 3px;
+    font-weight: 500;
+    letter-spacing: 1.63px;
+    padding-top: 6px;
+    margin-left: -18%;
+    margin-top: 3%;
+  }
+  
+  .potm-meow-minutes {
+    position: absolute;
+    font-family: "Avenir Next";
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    color: $senary;
+    border-radius: 3px;
+    font-weight: 500;
+    letter-spacing: 1.63px;
+    padding-top: 6px;
+    margin-left: -11.50%;
+    margin-top: 3%;
+  }
+
+  .potm-meow-seconds {
+    position: absolute;
+    font-family: "Avenir Next";
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    color: $senary;
+    border-radius: 3px;
+    font-weight: 500;
+    letter-spacing: 1.63px;
+    padding-top: 6px;
+    margin-left: -5.50%;
+    margin-top: 3%;
+  }
 }
 
 .potm-section-spacer {
@@ -124,41 +151,38 @@ img {
 }
 
 .potm-section-content-articles {
-  font-family: $font-family;
+  font-family: $poppins-font-family;
   font-size: 2.6vh;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: $black;
+  color: $senary;
   height: 642px;
 }
 
 .potm-section-content-events{
-  font-family: $font-family;
+  font-family: $poppins-font-family;
   font-size: 2.6vh;
   background-image: url("../images/greg-rakozy-38802-unsplash.jpg");
-  color: #ffffff;
+  color: $senary;
   height: 1026px;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .potm-section-content-speakers{
-  font-family: $font-family;
+  font-family: $poppins-font-family;
   font-size: 2.6vh;
   background-image: url("../images/nathan-anderson-313342-unsplash.jpg");
-  color: #ffffff;
+  color: $senary;
   height: 1026px;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-// footer height cannot be stored as a variable
-// it gets evaled to late
+// Footer height cannot be stored as a variable
+// It gets evaled to late
 .potm-footer {
-  font-family: $font-family;
+  font-family: $poppins-font-family;
   @include display-flex(center, center, row);
-  -webkit-box-shadow: 2px -11px 11px -13px $quinary-rgba;
-  -moz-box-shadow: 2px -11px 11px -13px $quinary-rgba;
-  box-shadow: 2px -11px 11px -13px $quinary-rgba;
   background-color: $quinary;
   height: 50px;
   padding-bottom: 10px;
@@ -175,10 +199,9 @@ img {
   }
 }
 
-// icon link styles
-
+// Icon link styles
 a > .fab {
-  color: white;
+  color: $senary;
 }
 
 a.social-link {

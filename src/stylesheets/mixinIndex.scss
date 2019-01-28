@@ -1,0 +1,12 @@
+// A basic reusable flexbox mixin
+// $align sets align-items
+// $justify sets justify-content
+// $direction sets flex-direction
+// Example implementation:
+// @include display-flex(center, center, row);
+@mixin display-flex($align, $justify, $direction) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
