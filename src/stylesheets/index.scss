@@ -8,11 +8,11 @@
 @import "./counter.scss";
 
 @keyframes shadow-transform {
-  0% { text-shadow: 3px 3px $primary, -3px -3px $quaternary; }
-  25% { text-shadow: -3px 3px $primary, 3px -3px $quaternary; }
-  50% { text-shadow: -3px -3px $primary, 3px 3px $quaternary; }
-  80% { text-shadow: 3px -3px $primary, -3px 3px $quaternary; }
-  100% {  text-shadow: 2px 2px $primary, -2px -2px $quaternary; }
+  0% { text-shadow: 4px 4px $primary, -4px -4px $quaternary; }
+  25% { text-shadow: -4px 4px $primary, 4px -4px $quaternary; }
+  50% { text-shadow: -4px -4px $primary, 4px 4px $quaternary; }
+  80% { text-shadow: 4px -4px $primary, -4px 4px $quaternary; }
+  100% {  text-shadow: 4px 4px $primary, -4px -4px $quaternary; }
 }
 
 body {
