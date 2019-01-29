@@ -165,7 +165,7 @@ img {
   color: $senary;
   height: 1026px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .potm-section-content-speakers{
@@ -177,7 +177,10 @@ img {
   background-repeat: no-repeat;
   background-size: contain;
 }
-
+.is-background{
+  width: 640px;
+  height: 310px;
+}
 // Footer height cannot be stored as a variable
 // It gets evaled to late
 .potm-footer {
