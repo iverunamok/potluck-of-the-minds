@@ -15,8 +15,8 @@ body {
 }
 
 img {
-  height: 50px;
-  width: 50px
+  // height: 50px;
+  // width: 50px
 }
 
 // This sets the footer at the bottom of the page
@@ -147,15 +147,15 @@ img {
 }
 
 .potm-section-content-slider {
-  height: 643px;
-}
-
-.potm-section-content-articles {
   font-family: $poppins-font-family;
   font-size: 2.6vh;
   background-color: $black;
   color: $senary;
   height: 642px;
+}
+
+.potm-section-content-articles {
+  height: 345px;
 }
 
 .potm-section-content-events{
@@ -177,10 +177,10 @@ img {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.is-background{
-  width: 640px;
-  height: 310px;
-}
+// .is-background{
+//   width: 640px;
+//   height: 310px;
+// }
 // Footer height cannot be stored as a variable
 // It gets evaled to late
 .potm-footer {

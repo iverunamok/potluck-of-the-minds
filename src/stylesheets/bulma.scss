@@ -1,0 +1,53 @@
+@import '../../node_modules/bulma-carousel/dist/css/bulma-carousel.sass';
+
+$carousel-nav-background: rgba(0, 2%, 92%, 0.7);
+$carousel-nav-color: blue;
+$carousel-title-background: rgba(0, 2%, 92%, 0.6);
+$carousel-title-size: 7px;
+
+
+.carousel-item{
+  display: block;
+  position: relative;
+  flex: 1 0 100%;
+  &.has-background{
+    .is-background{
+      object-fit: contain;
+      object-position: center center;
+      height: 100%;
+    }
+  }
+}
+
+.carousel-container{
+  width: 100%;
+  position: relative;
+  border: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  left: -100%;
+  transform: translateX(100%);
+}
+
+.carousel{
+  position: relative;
+  overflow: hidden;
+  .carousel-container{
+    +carousel-container{
+      .carousel-item{
+        +carousel-item{
+  .carousel-navigation{
+    +carousel-navigation{
+  &.is-reversing{
+    .carousel-container{
+      transform: translateX(-100%);
+    }
+  }
+    }
+  }
+        }
+      }
+    }
+  }
+}
