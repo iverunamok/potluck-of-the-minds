@@ -7,6 +7,14 @@
 // Componenet Stylesheets
 @import "./counter.scss";
 
+@keyframes shadow-transform {
+  0% { text-shadow: 4px 4px $primary, -4px -4px $quaternary; }
+  25% { text-shadow: -4px 4px $primary, 4px -4px $quaternary; }
+  50% { text-shadow: -4px -4px $primary, 4px 4px $quaternary; }
+  80% { text-shadow: 4px -4px $primary, -4px 4px $quaternary; }
+  100% {  text-shadow: 4px 4px $primary, -4px -4px $quaternary; }
+}
+
 body {
   color: $senary;
   background-color: $quinary;
@@ -66,8 +74,10 @@ img {
     font-size: 79px;
     color: $senary;
     padding-top: 12%;
-    text-shadow: 6px 6px $primary, -6px -6px $quaternary;
     font-weight: bolder;
+    animation-name: shadow-transform;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
   }
 
   #potm-counter {
