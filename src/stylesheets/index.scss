@@ -4,16 +4,13 @@
 @import "./globalVars.scss";
 @import "./mixinIndex.scss";
 
-// Componenet Stylesheets
+// Component Stylesheets
+// Ordered by cascade
+// Header also contains nav css
+@import "./header.scss";
 @import "./counter.scss";
-
-@keyframes shadow-transform {
-  0% { text-shadow: 4px 4px $primary, -4px -4px $quaternary; }
-  25% { text-shadow: -4px 4px $primary, 4px -4px $quaternary; }
-  50% { text-shadow: -4px -4px $primary, 4px 4px $quaternary; }
-  80% { text-shadow: 4px -4px $primary, -4px 4px $quaternary; }
-  100% {  text-shadow: 4px 4px $primary, -4px -4px $quaternary; }
-}
+@import "./section.scss";
+@import "./footer.scss";
 
 body {
   color: $senary;
@@ -28,128 +25,6 @@ img {
   background-color: $quinary-rgba;
 }
 
-.potm-logo-nav {
-  margin-left: 20px;
-}
-
-// This sets the footer at the bottom of the page
-.potm-container {
-  min-height: calc(100vh - 50px);
-}
-
-.potm-header {
-  padding-top: 20px;
-  background-image: url("../images/header.jpg");
-  background-repeat: no-repeat;
-  height: 800px;
-  .potm-navbar {
-    font-family: $poppins-font-family;
-    color: $senary;
-    width: 100%;
-    @include display-flex(center, space-between, row);
-    .potm-h2-basic-brand {
-      padding-left: 0.8vw;
-    }
-  }
-  .potm-ul-top-nav {
-    list-style: none;
-    padding-right: .8rem;
-    font-family: $poppins-font-family;
-    @include display-flex(center, space-between, row);
-    a {
-      color: $senary;
-      text-decoration: none;
-      font-family: $poppins-font-family;
-      padding: .5rem;
-      font-size: 2.8vh;
-    }
-  }
-}
-
-.potm-section-content-header {
-  font-family: $poppins-font-family;
-  font-size: 2.6vh;
-  color: $senary;
-  color: #000000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  .potm-h3-animated-potm{
-    font-size: 79px;
-    color: $senary;
-    padding-top: 12%;
-    font-weight: bolder;
-    animation-name: shadow-transform;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-  }
-
-}
-
-.potm-section-spacer {
- height: $spacer-height;
-}
-
-.potm-section-content-slider {
-  height: 643px;
-}
-
-.potm-section-content-articles {
-  font-family: $poppins-font-family;
-  font-size: 2.6vh;
-  background-color: $black;
-  color: $senary;
-  height: 642px;
-}
-
-.potm-section-content-events{
-  font-family: $poppins-font-family;
-  font-size: 2.6vh;
-  background-image: url("../images/events-unsplash.jpg");
-  color: $senary;
-  height: 1026px;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.potm-section-content-speakers{
-  font-family: $poppins-font-family;
-  font-size: 2.6vh;
-  background-image: url("../images/speakers-unsplash.jpg");
-  color: $senary;
-  height: 1026px;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-// Footer height cannot be stored as a variable
-// It gets evaled to late
-.potm-footer {
-  font-family: $poppins-font-family;
-  @include display-flex(center, center, row);
-  background-color: $quinary;
-  height: 50px;
-  padding-bottom: 10px;
-  .potm-footer-elem {
-    margin-top: 1%;
-    padding: .8rem;
-  }
-  ul {
-    list-style: $none;
-    li {
-      color: $senary;
-      text-decoration: $none;
-    }
-  }
-}
-
-// Icon link styles
-a > .fab {
-  color: $senary;
-}
-
-a.social-link {
-  padding: 0px 10px;
+.potm-hide {
+  display: none;
 }
