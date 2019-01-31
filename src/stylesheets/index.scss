@@ -17,14 +17,19 @@
 
 body {
   color: $senary;
-  background-color: $quinary;
+  background-color: $black;
   margin: 0rem;
   height: 100%;
 }
 
 img {
   height: 50px;
-  width: 50px
+  width: 50px;
+  background-color: $quinary-rgba;
+}
+
+.potm-logo-nav {
+  margin-left: 20px;
 }
 
 // This sets the footer at the bottom of the page
@@ -33,7 +38,8 @@ img {
 }
 
 .potm-header {
-  background-image: url("../images/Background.jpg");
+  padding-top: 20px;
+  background-image: url("../images/header.jpg");
   background-repeat: no-repeat;
   height: 800px;
   .potm-navbar {
@@ -173,7 +179,7 @@ img {
 .potm-section-content-events{
   font-family: $poppins-font-family;
   font-size: 2.6vh;
-  background-image: url("../images/greg-rakozy-38802-unsplash.jpg");
+  background-image: url("../images/events-unsplash.jpg");
   color: $senary;
   height: 1026px;
   background-repeat: no-repeat;
@@ -183,7 +189,7 @@ img {
 .potm-section-content-speakers{
   font-family: $poppins-font-family;
   font-size: 2.6vh;
-  background-image: url("../images/nathan-anderson-313342-unsplash.jpg");
+  background-image: url("../images/speakers-unsplash.jpg");
   color: $senary;
   height: 1026px;
   background-repeat: no-repeat;
