@@ -10,3 +10,14 @@
   justify-content: $justify;
   flex-direction: $direction;
 }
+
+// Repeated process for content sections
+// $image-path is a string, the path for the background image
+@mixin ptom-section-content($image-path) {
+  font-family: $poppins-font-family;
+  font-size: 2.6vh;
+  background-image: url($image-path);
+  height: 1026px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
