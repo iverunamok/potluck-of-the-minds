@@ -37,6 +37,27 @@
       font-size: 2.8vh;
     }
   }
+  .potm-section-content-header {
+    a {
+      border-radius: 25px;
+      background-color: transparent;
+      color: white;
+      padding: 1.6rem 4rem;
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      border-width: 0.5px;
+      border-color: rgba(255,255,255,0.5);
+    }
+  }
+  .stroke-187 {	
+    box-sizing: border-box;
+    height: 1rem;
+    width: 1rem;
+    margin-top: 12rem;
+    border-left: 3px solid #1A9A8B;
+    border-bottom: 3px solid #1A9A8B;
+    transform: rotate(-45deg);
+  }
 }
 
 .potm-section-content-header {
