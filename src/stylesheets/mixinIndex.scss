@@ -21,3 +21,12 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+// Repeated process for content section text
+// $font-size in px, $font-color use globalVar color
+@mixin potm-section-text($font-size, $font-color) {
+  text-align: left;
+  color: $font-color;
+  font-family: $poppins-font-family;
+  font-size: $font-size;
+}

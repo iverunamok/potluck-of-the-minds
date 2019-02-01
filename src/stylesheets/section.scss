@@ -13,22 +13,13 @@
      margin-left: 25px
    }
    .potm-scs-text1{
-     text-align: left;
-     color: $secondary;
-     font-family: $poppins-font-family;
-     font-size: 20px;
+      @include potm-section-text(20px, $secondary);
    }
    .potm-scs-text2{
-     text-align: left;
-     color: $senary;
-     font-family: $poppins-font-family;
-     font-size: 16px;
+      @include potm-section-text(16px, $senary);
    }
    .potm-scs-text3{
-     text-align: left;
-     color: $senary;
-     font-family: $poppins-font-family;
-     font-size: 40px;
+      @include potm-section-text(40px, $senary);
    }
  }
  
