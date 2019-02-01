@@ -18,11 +18,10 @@
     height: 50%;
   }
   .potm-footer-elem__rsvp {
-    @include display-flex(center, space-around, row);
+    @include display-flex(center, space-evenly, row);
     padding-top: 1.5rem;
     .potm-footer-elem__rsvp__anchor {
       width: 80%;
-      padding-left: 2rem;
     }
     .potm-footer-elem__rsvp__text {
       font-size: x-small;
