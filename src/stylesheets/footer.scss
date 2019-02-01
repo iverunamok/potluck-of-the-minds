@@ -8,9 +8,26 @@
 // It gets evaled to late
 .potm-footer {
   font-family: $poppins-font-family;
-  @include display-flex(center, center, row);
+  @include display-flex(center, normal, column);
   background-color: $quinary;
-  height: 100px;
+  height: 15rem;
+  .potm-footer-elem__social {
+    background-color: $black;
+    @include display-flex(center, center, row);
+    width: 100%;
+    height: 50%;
+  }
+  .potm-footer-elem__rsvp {
+    @include display-flex(center, space-around, row);
+    padding-top: 1.5rem;
+    .potm-footer-elem__rsvp__anchor {
+      width: 80%;
+      padding-left: 2rem;
+    }
+    .potm-footer-elem__rsvp__text {
+      font-size: x-small;
+    }
+  }
 }
 
 // Icon link styles
