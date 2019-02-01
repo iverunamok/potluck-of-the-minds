@@ -49,12 +49,10 @@ function isEmail(emailToCheck) {
 }
 
 function emailValidator (e) {
-  console.log(e)
   const email = e.target.value
   const emailInput = document.getElementById('potm-contact-email')
   const helpTag = document.getElementById('potm-contact-email-help')
   const emailDangerIcon = document.getElementById('ptom-contact-email-icon')
-  console.log(email)
   if(email.length <= 1) {
     // clear all warnings
     helpTag.textContent = 'Enter a valid email'
@@ -75,7 +73,6 @@ function emailValidator (e) {
     console.log('default case')
   }
 }
-
 
 function indexCounterInterval () {
   return setInterval(() => {
@@ -109,8 +106,6 @@ function sendMail() {
   let send = 'mailto:potluckOfTheMinds406@gmail.com?body=' + document.getElementById('body').value
   window.open(send);
 }
-
-
 
 // Check pathname and establish listeners for index
 // Var established here to remove confusion
