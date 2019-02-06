@@ -9,8 +9,8 @@
    background-repeat: no-repeat;
    background-position: center right;
    .carousel-item{
-     margin-top: 350px;
-     margin-left: 25px
+      margin-top: 350px;
+      margin-left: 25px
    }
    .potm-scs-text1{
       @include potm-section-text(20px, $secondary);
@@ -31,10 +31,36 @@
  }
  
  .potm-section-content-events{
-   @include ptom-section-content($bg-content-events);
+    @include potm-section-content($bg-content-events);
  }
  
  .potm-section-content-speakers {
-   @include ptom-section-content($bg-content-speakers);
+    @include potm-section-content($bg-content-speakers);
+    .potm-scs-text4{
+      text-align: center;
+      color: $senary;
+      font-family: $poppins-font-family;
+      font-size: 44px;
+    }
+    .potm-scs-container{
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .potm-scs-img-container{
+      margin-top: 30%;
+      display: inline-block;
+      text-align: center;
+    }
+    .potm-scs-images{
+      border-radius: 50%;
+      height: 200px;
+      width: 200px;
+    }
+    .potm-scs-image-names{
+      font-family: $avenir-next-font-family;
+      font-size: 18px;
+      color: $senary;
+      display: block;
+    }
  }
  
