@@ -31,7 +31,7 @@ A website for the potluck of the minds event in Missoula.
 #### Testing Changes for production remotely
 
 - push the testing branch to heroku -> `git push heroku <branch-name>:master`, this will push up your branch to heroku master
-- navigate to the [current production branch](https://still-bayou-37564.herokuapp.com/) 
+- navigate to the [current production branch](https://potluck-of-the-minds.herokuapp.com/)
 - hopefully you have heroku command line tools `heroku logs --tail` will give you error output
 
 #### Recaptcha
@@ -42,4 +42,4 @@ To manage:
 [Recaptcha](https://www.google.com/recaptcha/)
 [Developer Site](https://developers.google.com/recaptcha/docs/v3)
 
-#### [Prod Site](https://www.potluckoftheminds.com/)
+#### [Prod Site](https://potluck-of-the-minds.herokuapp.com/)
