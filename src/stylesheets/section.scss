@@ -36,29 +36,33 @@
  
  .potm-section-content-speakers {
     @include potm-section-content($bg-content-speakers);
+    @include display-flex(center, center, column);
     .potm-scs-text4{
       text-align: center;
       color: $senary;
       font-family: $poppins-font-family;
-      font-size: 44px;
+      font-size: 1.5em;
+      font-weight: lighter;
+      letter-spacing: -0.58px;	
     }
     .potm-scs-container{
+      margin-top: 6%;
       display: flex;
       justify-content: space-evenly;
     }
     .potm-scs-img-container{
-      margin-top: 30%;
       display: inline-block;
       text-align: center;
     }
     .potm-scs-images{
       border-radius: 50%;
-      height: 200px;
-      width: 200px;
+      height: 150px;
+      width: 150px;
+      padding: 5px;
     }
     .potm-scs-image-names{
       font-family: $avenir-next-font-family;
-      font-size: 18px;
+      font-size: 2vh;
       color: $senary;
       display: block;
     }
