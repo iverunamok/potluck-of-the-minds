@@ -11,41 +11,39 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-LRlmVvLKVApDVGuspQFnRQJjkv0P7/YFrw84YYQtmYG4nK8c+M+NlmYDCv0rKWpG" crossorigin="anonymous">
   </head>
   <body>
-    <div class="container">
-      <header class="header">
-        <nav class="navbar">
-          <h2 class="h2-basic-brand"> Potluck of the Minds </h2>
-          <ul class="ul-top-nav">
+    <div class="potm-container">
+      <header class="potm-header"> 
+        <nav class="potm-navbar">
+          <img class="potm-logo-nav" src="./images/trans-logo.png" alt="">
+          <ul class="potm-ul-top-nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
-      </header>
-      <main class="main">
-        <section class="section-spacer">
-      
-        </section>
-        <section class="section-content">
+        <section class="potm-section-content-header potm-mission-header">
           <h3>Why Potluck of the Minds?</h3>
+          <br/>
           <p>The goal of Potluck of the Minds is to bring together those in our community with an urge to teach, learn, and share.</p>
-        </section>
-    
-        <section class="section-spacer">
-
-        </section>
-        <section class="section-content">
+          <br/>
           <h3>Values and Words We Hold Close.</h3>
-          <p>Symposium: "A place to inspire thought and conversation about the abnormal and difficult topics that exist."</p>
-          <p>Enlighten: We strive for our attendees to leave feeling like they learned something new.</p>
-          <p>Community: There are a lot of people in this community with wisdom and knowledge to share. Let's learn from eachother!</p>
+          <br/>
+          <ul class="potm-mission-header-list">
+            <li><em>Symposium: </em>"A place to inspire thought and conversation about the abnormal and difficult topics that exist."</li>
+            <br/>
+            <li><em>Enlighten: </em>We strive for our attendees to leave feeling like they learned something new.</li>
+            <br/>
+            <li><em>Community: </em>There are a lot of people in this community with wisdom and knowledge to share. Let's learn from each other!</li>
+          </ul>
+          <br/>
           <p>Don't bring your kids, bring your parents!</p>
         </section>
+      </header>
+      <main class="main">
       </main>
     </div>
-    <footer class="footer">
-      <h3 class="footer-elem">RSVP</h3>
-      <div class="footer-elem__social">
+    <footer id="potm-footer" class="potm-footer">
+      <div class="potm-footer-elem__social">
         <a class="social-link" target="_blank" href="https://www.facebook.com/Potluck-Of-The-Minds-479609349226739/">
           <i class="fab fa-facebook fa-3x"></i>
         </a>
@@ -55,6 +53,14 @@
         <a class="social-link" target="_blank" href="https://twitter.com/potluckMinds">
           <i class="fab fa-twitter fa-3x"></i>
         </a>
+      </div>
+      <div class="potm-footer-elem__rsvp">
+        <a class="potm-footer-elem__rsvp__anchor" href="https://www.meetup.com/MissoulaTech/events/258047128/">
+          <h3>RSVP</h3>
+        </a>
+        <p class="potm-footer-elem__rsvp__text" >
+          Potluck of the Minds is awesome
+        </p>
       </div>
     </footer>
     <script src="index.js"></script>
