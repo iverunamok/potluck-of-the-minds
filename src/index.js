@@ -6,7 +6,7 @@ const carousels = bulmaCarousel.attach()
 
 // String constants
 const COUNTER_ID = 'potm-counter'
-const COUNT_DATE = 'February 22, 2019 18:30:00'
+const COUNT_DATE = 'July 22, 2019 18:30:00'
 
 // Ids for setting the countdown
 const placementArray = [
@@ -99,12 +99,6 @@ function indexCounterInterval () {
       document.getElementById(COUNTER_ID).innerHTML = 'It Right Meow!';
     }
   }, 1000);
-}
-
-// This is outdated need to update
-function sendMail() {
-  let send = 'mailto:potluckOfTheMinds406@gmail.com?body=' + document.getElementById('body').value
-  window.open(send);
 }
 
 // Check pathname and establish listeners for index
