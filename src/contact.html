@@ -15,7 +15,7 @@
     <div class="container">
       <header class="potm-header">
         <nav class="potm-navbar">
-          <img class="potm-logo-nav" src="./images/trans-logo.png" alt="">
+          <img class="potm-logo-nav" src="./images/trans-logo.png" alt="Potluck Of The Minds">
           <ul class="potm-ul-top-nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -26,9 +26,9 @@
       <main>
         <form>
           <div class="field">
-            <label class="label">Email</label>
+            <label class="label" tabindex="1">Email</label>
             <div class="control has-icons-left has-icons-right">
-              <input id="potm-contact-email" class="input" type="email" placeholder="Email input" value="">
+              <input id="potm-contact-email" class="input" type="email" placeholder="Email Input" value="" name="email" tabindex="1">
               <span class="icon is-small is-left">
                 <i class="fas fa-envelope"></i>
               </span>
@@ -40,36 +40,42 @@
           </div>
 
           <div class="field">
-            <label class="label">Message</label>
+            <label class="label" tabindex="1">Message</label>
             <div class="control">
-              <textarea class="textarea" placeholder="Textarea"></textarea>
+              <textarea class="textarea" placeholder="Text Area" tabindex="1"></textarea>
             </div>
           </div>
-          
-          
+
           <div class="field is-grouped">
             <div class="control">
-              <button class="button is-link">Submit</button>
+              <button class="button is-link" tabindex="2">Submit</button>
             </div>
             <div class="control">
-              <button class="button is-text">Cancel</button>
+              <button class="button is-text" tabindex="2">Cancel</button>
             </div>
           </div>
         </form>
       </main>
       <footer class="potm-footer">
-        <h3 class="potm-footer-elem">RSVP</h3>
         <div class="potm-footer-elem__social">
           <a class="social-link" target="_blank" href="https://www.facebook.com/Potluck-Of-The-Minds-479609349226739/">
-            <i class="fab fa-facebook fa-3x"></i>
+            <i class="fab fa-facebook fa-3x" aria-hidden="true"></i>
           </a>
           <a class="social-link" target="_blank" href="https://www.instagram.com/potluck_of_the_minds/">
-            <i class="fab fa-instagram fa-3x"></i>
+            <i class="fab fa-instagram fa-3x" aria-hidden="true"></i>
           </a>
           <a class="social-link" target="_blank" href="https://twitter.com/potluckMinds">
-            <i class="fab fa-twitter fa-3x"></i>
+            <i class="fab fa-twitter fa-3x" aria-hidden="true"></i>
           </a>
         </div>
+        <div class="potm-footer-elem__rsvp">
+            <a class="potm-footer-elem__rsvp__anchor" href="https://www.meetup.com/MissoulaTech/events/258047128/">
+              <h3>RSVP</h3>
+            </a>
+            <p class="potm-footer-elem__rsvp__text" >
+              Potluck of the Minds is awesome
+            </p>
+          </div>
       </footer>
       </div>
     <script src="index.js"></script>

@@ -14,7 +14,7 @@
     <div class="potm-container">
       <header class="potm-header">
         <nav class="potm-navbar">
-          <img class="potm-logo-nav" src="./images/trans-logo.png" alt="">
+          <img class="potm-logo-nav" src="./images/trans-logo.png" alt="Potluck Of The Minds">
           <ul class="potm-ul-top-nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -22,7 +22,7 @@
           </ul>
         </nav>
         <section class="potm-section-content-header">
-          <h3 class="potm-h3-animated-potm">POTLUCK OF THE MINDS</h3>
+          <h3 class="potm-h3-animated-potm" tabindex="1">POTLUCK OF THE MINDS</h3>
           <div class="potm-counter-grid">
             <div class="potm-counter-time potm-counter-box"><p id="potm-days"></p></div>
             <div class="potm-counter-text potm-counter-box"><h2>days</h2></div>
@@ -32,8 +32,9 @@
             <div class="potm-counter-text potm-counter-box"><h2>minutes</h2></div>
             <div class="potm-counter-time potm-counter-box"><p id="potm-seconds"></p></div>
             <div class="potm-counter-text potm-counter-box"><h2>seconds</h2></div>
+            <time datetime="2019-05-12"></time>
           </div>
-          <a href="https://www.meetup.com/MissoulaTech/events/258047128/" target="_blank" class="potm-header-rsvp button">RSVP</a>
+          <a href="https://www.meetup.com/MissoulaTech/events/258047128/" target="_blank" class="potm-header-rsvp button" tabindex="2">RSVP</a>
           <a href="#potm-footer">
             <div class="potm-down-arrow">
             </div>
@@ -43,7 +44,7 @@
       <main class="potm-main">
         <section class="potm-section-content-articles">
         </section>
-        <section class="potm-section-content-slider">
+        <section class="potm-section-content-slider" tabindex="2">
           <div class="carousel carousel-animated carousel-animate-slide" data-autoplay="true">
             <div class="carousel-container">
               <div class="carousel-item"> 
@@ -70,23 +71,23 @@
           </div>
         </section>
         <section class="potm-section-content-speakers">
-          <span class="potm-scs-text4">Most Recent Speakers</span>
+          <span class="potm-scs-text4" tabindex="3">Most Recent Speakers</span>
           <div class="potm-scs-container">
             <div class="potm-scs-img-container">
               <img class="potm-scs-images" src="./images/Kels.jpg"/>
-              <span class="potm-scs-image-names">Kelsey <br> Iverson</span>
+              <span class="potm-scs-image-names" tabindex="3">Kelsey <br> Iverson</span>
             </div>
             <div class="potm-scs-img-container">
               <img class="potm-scs-images" src="./images/Ed.jpg"/>
-              <span class="potm-scs-image-names">Edward <br> Weymouth</span>
+              <span class="potm-scs-image-names" tabindex="3">Edward <br> Weymouth</span>
             </div>
             <div class="potm-scs-img-container">
               <img class="potm-scs-images" src="./images/Nora.jpg"/>
-              <span class="potm-scs-image-names">Nora <br> McDougall-Collins</span>
+              <span class="potm-scs-image-names" tabindex="3">Nora <br> McDougall-Collins</span>
             </div>
             <div class="potm-scs-img-container">
               <img class="potm-scs-images" src="./images/Kirk.jpg"/>
-              <span class="potm-scs-image-names">Kirk <br> Richardson</span>
+              <span class="potm-scs-image-names" tabindex="3">Kirk <br> Richardson</span>
             </div>
           </div>
         </section>              
@@ -94,22 +95,22 @@
     </div>
     <footer id="potm-footer" class="potm-footer">
       <div class="potm-footer-elem__social">
-        <a class="social-link" target="_blank" href="https://www.facebook.com/Potluck-Of-The-Minds-479609349226739/">
-          <i class="fab fa-facebook fa-3x"></i>
+        <a class="social-link" target="_blank" href="https://www.facebook.com/Potluck-Of-The-Minds-479609349226739/" tabindex="4" alt="facebook">
+          <i class="fab fa-facebook fa-3x" aria-hidden="true"></i>
         </a>
-        <a class="social-link" target="_blank" href="https://www.instagram.com/potluck_of_the_minds/">
-          <i class="fab fa-instagram fa-3x"></i>
+        <a class="social-link" target="_blank" href="https://www.instagram.com/potluck_of_the_minds/" tabindex="4" alt="instagram">
+          <i class="fab fa-instagram fa-3x" aria-hidden="true"></i>
         </a>
-        <a class="social-link" target="_blank" href="https://twitter.com/potluckMinds">
-          <i class="fab fa-twitter fa-3x"></i>
+        <a class="social-link" target="_blank" href="https://twitter.com/potluckMinds" tabindex="4" alt="twitter">
+          <i class="fab fa-twitter fa-3x" aria-hidden="true"></i>
         </a>
       </div>
       <div class="potm-footer-elem__rsvp">
-        <a class="potm-footer-elem__rsvp__anchor" href="https://www.meetup.com/MissoulaTech/events/258047128/">
+        <a class="potm-footer-elem__rsvp__anchor" href="https://www.meetup.com/MissoulaTech/events/258047128/" tabindex="4" alt="rsvp">
           <h3>RSVP</h3>
         </a>
-        <p class="potm-footer-elem__rsvp__text" >
-          Potluck of the Minds is awesome
+        <p class="potm-footer-elem__rsvp__text" tabindex="4">
+          Potluck of the Minds is Awesome
         </p>
       </div>
     </footer>
